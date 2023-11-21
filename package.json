@@ -1,0 +1,10 @@
+{
+  "name": "qcm_api",
+  "version": "0.0.1",
+  "main": "src/api.js",
+  "scripts": {
+    "start": "node src/start.js"
+  },
+  "author": "OGI",
+  "dependencies": {}
+}
