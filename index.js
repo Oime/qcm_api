@@ -4,11 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => res.send('Home Page Route'));
 
-app.get('/about', (req, res) => res.send('About Page Route'));
-
-app.get('/portfolio', (req, res) => res.send('Portfolio Page Route'));
-
-app.get('/contact', (req, res) => res.send('Contact Page Route'));
+app.get('/getQuestion', (req, res) => res.send({question:`Quel est la couleur du cheval blanc d'Henry 4 ?`, reponse:[`blanc`, `rouge`]}));
 
 const port = process.env.PORT || 3000;
 
