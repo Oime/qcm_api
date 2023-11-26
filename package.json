@@ -1,12 +1,12 @@
 {
   "name": "qcm_api",
   "version": "0.0.1",
-	"main": "index.js",
+  "main": "index.js",
   "scripts": {
-		"start": "node index.js"
+    "start": "node index.js"
   },
   "author": "OGI",
   "dependencies": {
-		"express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }

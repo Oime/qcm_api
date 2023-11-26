@@ -2,9 +2,25 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => res.send('Home Page Route'));
+app.get('/', (req, res) => res.send('API OK'));
 
-app.get('/getQuestion', (req, res) => res.send({question:`Quel est la couleur du cheval blanc d'Henry 4 ?`, reponse:[`blanc`, `rouge`]}));
+app.get('/getQuestions', (req, res) => {
+    console.log("/getQuestions");
+    res.send([
+        { question:`Quel est le nombre de côté d'un carré ?`, reponses:[`2`, `3`, `4`, `5`], reponse: `4` },
+        { question:`Quel est la couleur du cheval blanc d'Henry 4 ?`, reponses:[`blanc`, `rouge`], reponse: `blanc` }
+    ]);
+});
+
+app.get('/getSujets', (req, res) => {
+    console.log("/getSujets");
+    res.send([
+        { nom:`PS : Je découvre les nombres`, code:`ps_nbr` },
+        { nom:`PS : Je découvre les couleurs`, code:`ps_coul` },
+        { nom:`CP : Math - Les additions`, code:`cp_math_add` },
+        { nom:`CE2 : Français - Les temps`, code:`CE2_fr_tps` },
+    ]);
+});
 
 const port = process.env.PORT || 3000;
 
